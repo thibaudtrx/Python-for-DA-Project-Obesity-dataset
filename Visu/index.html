@@ -1,0 +1,141 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<form action="/predict" method="post">
+    {% csrf_token %}
+       <p>This model predicts soomeone's obesity level</p>
+    <div>
+        <label for="Gender">Gender :</label>
+        <select name="Gender" id="Gender">
+            <option value=0>Female</option>
+            <option value=1>Male</option>          
+        </select>
+        </select>
+    </div>
+    <div>
+        <label for="Age">Age :</label>
+        <select name="Age" id="Age">
+        <option value =20>20 </option>
+        </select>
+    </div>
+    <div>
+        <label for="Height">Height :</label>
+        <select name="Height" id="Height">
+        <option value =1.70>1.70 </option>
+        </select>
+    </div>
+        <div>
+        <label for="Weight">Weight :</label>
+        <select name="Weight" id="Weight">
+        <option value =120>120 </option>
+        </select>
+    </div>
+
+
+    <div>
+
+    <div>
+        <label for="family_history_with_overweight">family_history_with_overweight :</label>
+        <select name="family_history_with_overweight" id="family_history_with_overweight">
+            <option value="0">No</option>
+            <option value="1">Yes</option>    
+        </select>
+    </div>
+    <div>
+        <label for="Caloric_food">Caloric_food :</label>
+        <select name="Caloric_food" id="Caloric_food">
+            <option value="0">No</option>
+            <option value="1">Yes</option>            
+        </select>
+    </div>
+    <div>
+        <label for="Veggies">Veggies :</label>
+        <select name="Veggies" id="Veggies">
+            <option value="1">Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Always</option>     
+        </select>
+    </div>
+    <div>
+        <label for="Nb_meals">Nb_meals :</label>
+        <select name="Nb_meals" id="Nb_meals">
+            <option value="1">Between 1 and 2</option>
+            <option value="2">3</option> 
+            <option value="3">More than 3</option>
+        
+        </select>
+    </div>
+    <div>
+        <label for="Eat_between_meals">Eat_between_meals :</label>
+        <select name="Eat_between_meals" id="Eat_between_meals">
+            <option value="0">No</option>
+            <option value="1">Sometimes</option> 
+            <option value="2">Frequently</option>
+            <option value="3">Always</option>
+      
+        </select>
+    </div>
+    <div>
+        <label for="Smoke">Smoke :</label>
+        <select name="Smoke" id="Smoke">
+            <option value="0">No</option>
+            <option value="1">Yes</option>          
+        </select>
+    </div>
+    <div>
+        <label for="Water">Water :</label>
+        <select name="Water" id="Water">
+            <option value="1">Less than 1L</option>
+            <option value="2">Between 1 and 2L</option>
+            <option value="3">More than 2L</option> 
+               
+        </select>
+    </div>
+    <div>
+        <label for="Monitor_calories">Monitor_calories :</label>
+        <select name="Monitor_calories" id="Monitor_calories">
+            <option value="0">No</option>
+            <option value="1">Yes</option>          
+        </select>
+    </div>
+    <div>
+        <label for="Physical_activity">Physical_activity :</label>
+        <select name="Physical_activity" id="Physical_activity">
+            <option value="0">I do not have</option>
+            <option value="1">1 or 2 days</option>
+            <option value="2">2 to 4 days</option>
+            <option value="3">4 or 4 days</option> 
+               
+        </select>
+    </div>  
+        <div>
+        <label for="Time_spent_on_tech">Time_spent_on_tech :</label>
+        <select name="Time_spent_on_tech" id="Time_spent_on_tech">
+            <option value="0">0-2 hours</option>
+            <option value="1">3-5 hours</option>
+            <option value="2">More than 5 hours</option>
+        </select>
+    </div> 
+        <div>
+        <label for="Alcohol">Alcohol :</label>
+        <select name="Alcohol" id="Alcohol">
+            <option value="0">I do not drink</option>
+            <option value="1">Sometimes/option>
+            <option value="2">Frequently</option>
+            <option value="3">Always</option>                
+        </select>
+    </div>     
+        <div>
+        <label for="Transport_means">Transport_means :</label>
+        <select name="Transport_means" id="Transport_means">
+            <option value="0">Bike</option>
+            <option value="1">Motorbike</option>    
+            <option value="2">Public_Transportation</option>
+            <option value="3">Walking</option>   
+        </select>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-danger">Predict obesity level</button>
+</form>
+</div>
