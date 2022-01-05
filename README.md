@@ -7,4 +7,6 @@ This project contains :
 - a Django API
 - a Powerpoint explaining the problem.
 
+Finally, the best machine learning algorithm to predict someone’s obesity level is SVC, with 0.959828 of accuracy. 
+
 Thibaud Trarieux
